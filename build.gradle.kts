@@ -14,6 +14,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "MainKt"
+        mainClass = "MainKt" // or wherever your main() is
+        nativeDistributions {
+            targetFormats(org.jetbrains.compose.desktop.application.dsl.TargetFormat.Dmg)
+            packageName = "SportsBetTracker"
+            packageVersion = "1.0.0"
+        }
     }
 }
